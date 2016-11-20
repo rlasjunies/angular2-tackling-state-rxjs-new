@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { AppState, stateAndDispatcher, modState } from './shared/';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  providers: stateAndDispatcher,
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  constructor(@Inject(modState) private state: Observable<AppState>) {
+    // nothing to do here
+  }
 }

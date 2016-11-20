@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Angular2TacklingStateRxjsNewPage {
+export class Angular2RxJSPage {
   navigateTo() {
     return browser.get('/');
   }
